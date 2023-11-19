@@ -20,6 +20,7 @@ class Habit(models.Model):
     reward = models.CharField(max_length=150, verbose_name='Вознаграждение')
     duration = models.DurationField(verbose_name='Время на выполнение')
     is_public = models.BooleanField(default=False, verbose_name='Признак публичности')
+    last_reminder_date = models.DateField(verbose_name='Дата последнего напоминания', null=True, blank=True)
 
     def __str__(self):
         return f'Я буду {self.action} в {self.time} в {self.location}'

@@ -2,8 +2,8 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
-from users.serializers import UserSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
+from users.serializers import UserSerializer, MyTokenObtainPairSerializer
 from django.contrib.auth import authenticate, login as django_login, logout
 from rest_framework import status
 
@@ -65,3 +65,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return Response({"message": "Вы успешно вышли из системы"}, status=status.HTTP_200_OK)
+
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer

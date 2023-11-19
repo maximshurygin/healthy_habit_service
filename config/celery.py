@@ -4,7 +4,7 @@ from celery import Celery
 from celery.schedules import crontab
 
 # Установка переменной окружения для настроек проекта
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
 # Создание экземпляра объекта Celery
 app = Celery('config')
