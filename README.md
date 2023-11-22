@@ -30,9 +30,9 @@ CORS_ALLOWED_ORIGINS = [
 
 ## Инструкция по развертыванию:
 
-* Склонировать репозиторий в IDE
+Склонировать репозиторий в IDE
 
-  В терминале ввести команду:
+В терминале ввести команду:
 
 ```
   git clone https://github.com/maximshurygin/coursework_7
