@@ -69,7 +69,7 @@ CORS_ALLOWED_ORIGINS = [
     python manage.py runserver
 ```
 
-Для работы с Celery и Redis запустить их в отдельных терминалах:
+Для работы с Celery запустить worker и beat в отдельных терминалах:
 
 Запуск Celery worker:
 
@@ -81,6 +81,15 @@ celery -A config worker -l info
 
 ```
 celery -A config beat -l info
+```
+Запуск Redis:
+
+Для работы Celery необходим брокер сообщений, в данном случае используется Redis. 
+Убедитесь, что Redis установлен и запущен на вашей машине. 
+Для запуска Redis выполните следующую команду:
+
+```
+redis-server
 ```
 
 ## Автор проекта:
