@@ -71,13 +71,13 @@ CORS_ALLOWED_ORIGINS = [
 
 Для работы с Celery и Redis запустить их в отдельных терминалах:
 
-    Запуск Celery worker:
+Запуск Celery worker:
 
 ```
 celery -A config worker -l info
 ```
 
-    Запуск Celery beat:
+Запуск Celery beat:
 
 ```
 celery -A config beat -l info
@@ -85,7 +85,8 @@ celery -A config beat -l info
 
 ## Автор проекта:
 
-Максим Шурыгин
+Максим Шурыгин.
+
 Если у вас возникли вопросы или проблемы при использовании проекта, свяжитесь со мной:
 maximys2142@mail.ru
 
