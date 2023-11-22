@@ -35,38 +35,38 @@ CORS_ALLOWED_ORIGINS = [
 В терминале ввести команду:
 
 ```
-  git clone https://github.com/maximshurygin/coursework_7
+git clone https://github.com/maximshurygin/coursework_7
 ```
 
 Перейти в папку проекта:
 
 ```
-    cd coursework_7
+cd coursework_7
 ```
 
 Создать и активировать виртуальное окружение:
 
 ```
-    python3 -m venv venv
-    source venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 Установить зависимости из файла requirements.txt:
 
 ```
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Применить миграции:
 
 ```
-    python manage.py migrate
+python manage.py migrate
 ```
 
 Запустить сервер разработки:
 
 ```
-    python manage.py runserver
+python manage.py runserver
 ```
 
 Для работы с Celery запустить worker и beat в отдельных терминалах:
@@ -85,7 +85,7 @@ celery -A config beat -l info
 Запуск Redis:
 
 Для работы Celery необходим брокер сообщений, в данном случае используется Redis. 
-Убедитесь, что Redis установлен и запущен на вашей машине. 
+Убедитесь, что Redis установлен и запущен. 
 Для запуска Redis выполните следующую команду:
 
 ```
