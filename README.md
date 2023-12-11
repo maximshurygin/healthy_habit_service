@@ -41,56 +41,22 @@ git clone https://github.com/maximshurygin/coursework_7
 Перейти в папку проекта:
 
 ```
-cd coursework_7
+cd django_rest
 ```
 
-Создать и активировать виртуальное окружение:
+Соберите Docker образы:
 
 ```
-python3 -m venv env
-source env/bin/activate
+docker-compose build
 ```
 
-Установить зависимости из файла requirements.txt:
+Запустите Docker Compose:
 
 ```
-pip install -r requirements.txt
+docker-compose up
 ```
 
-Применить миграции:
-
-```
-python manage.py migrate
-```
-
-Запустить сервер разработки:
-
-```
-python manage.py runserver
-```
-
-Для работы с Celery запустить worker и beat в отдельных терминалах:
-
-Запуск Celery worker:
-
-```
-celery -A config worker -l info
-```
-
-Запуск Celery beat:
-
-```
-celery -A config beat -l info
-```
-Запуск Redis:
-
-Для работы Celery необходим брокер сообщений, в данном случае используется Redis. 
-Убедитесь, что Redis установлен и запущен. 
-Для запуска Redis выполните следующую команду:
-
-```
-redis-server
-```
+Приложение будет доступно по адресу `http://localhost:8000/`
 
 ## Автор проекта:
 
