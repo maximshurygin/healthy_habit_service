@@ -32,16 +32,16 @@ CORS_ALLOWED_ORIGINS = [
 
 Склонировать репозиторий в IDE
 
-В терминале ввести команду:
+В терминале введите команду:
 
 ```
 git clone https://github.com/maximshurygin/coursework_7
 ```
 
-Перейти в папку проекта:
+Перейдите в папку проекта:
 
 ```
-cd django_rest
+cd coursework_7
 ```
 
 Соберите Docker образы:
